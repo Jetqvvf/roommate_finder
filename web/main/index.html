@@ -1,0 +1,58 @@
+<head>
+    <title>HomePage</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="../static/jquery.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Roommate Finder</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li id="addCase.jsp"><a id="uploadli" href="#">Func1</a></li>
+                <li id="preProcess.jsp"><a id="preli" href="#">Func2</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Func3 <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Func3.1</a></li>
+                        <li><a href="#">Func3.2</a></li>
+                        <li><a href="#">Func3.3</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="unknown">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../sign_up.html"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
+                </ul>
+            </div>
+            <div id="user" class="dropdown nav navbar-nav navbar-right" style="display: none">
+                <button id="username" type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                    欢迎
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">个人主页</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">设置</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">退出登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="btn-toolbar" role="toolbar">
+</div>
+<hr/>
+<div id="grid1"></div>
+</body>
+</html>
