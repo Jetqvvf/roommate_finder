@@ -1,9 +1,13 @@
 package domain.user;
 
+import java.util.ArrayList;
+
 import domain.user.User;
-import domain.user.Login;
 
 public interface UserDao {
-	public int register(User c);
-	public User validateUser(Login login);
+	int register(User c);
+	int login(User c);
+	ArrayList display();
+	ArrayList<User> searchUser(String input);
+	void uploadUser(String[] input);
 }

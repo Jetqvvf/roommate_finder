@@ -6,7 +6,8 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private String email;
-	
+	private int priority;
+	private int userId;
 	
 	public String getUsername() {
 		return username;
@@ -37,5 +38,17 @@ public class User {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public int getPriority() {
+		return priority;
+	}
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 }

@@ -13,7 +13,7 @@ $(document).ready(function() {
 	}
 
 	function isRightPassword(password) {
-		var pattern = /^.{6,}$/;
+		var pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
 		return pattern.test(password);
 	}
 	
@@ -21,9 +21,8 @@ $(document).ready(function() {
 		return (password==$('#password').val())
 	}
 	
-	
 	function isRightEmail(email) {
-		var pattern = /^[\da-zA-Z]+@[/da-zA-Z]+\.[a-zA-Z]{3}$/;
+		var pattern = /^(\w{1,25})@(\w{1,16})(\.(\w{1,4})){1,3}$/;
 		return pattern.test(email);
 	}	
 	
@@ -133,7 +132,7 @@ $(document).ready(function() {
 		
 		$.ajax({
 			type : 'post',
-			url : 'UserController',
+			url : 'LoginControl',
 			data :JSON.stringify({
 				username : username,
 				password : password,
@@ -149,7 +148,8 @@ $(document).ready(function() {
 			
 			success: function(response) {
 				if (response.error == 0) {
-                    window.location.href='main/homepage.html';
+					alert(response.msg);
+					location.href = "profile.jsp";
 				} else if (1 == response.error) {
 					$('#username').focus();
 					setErrorMsg("#username", 2, response.msg);
